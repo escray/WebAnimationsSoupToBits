@@ -1,0 +1,116 @@
+/* global animations*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-300px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Dan Eden Inspired Animation */
+@keyframes zoomIn {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* https://github.com/escray/animate.css/blob/master/source/attention_seekers/tada.css */
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/*.zoomIn {*/
+    /*animation-name: zoomIn;*/
+/*}*/
+
+/* Logo Animations */
+.index .brand--top {
+    animation: fadeIn .5s, slideDown .5s;
+}
+
+.index .main {
+    animation: slideUp .75s;
+}
+
+/* Button Animations*/
+.btn--a {
+    transition: all .3s;
+}
+
+/* Quiz Page Animations */
+
+.answer-link:hover {
+    transition: all .5s;
+}
+
+.answer-link.is-selected {
+    transition: transform .3s;
+    transform: scale(1.025);
+}
+
+/* Results Page */
+.character {
+    animation: fadeIn .5s forwards, tada 1s;
+}
+
+.character-description {
+    visibility: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+}
+
+.share {
+    visibility: hidden;
+    opacity: 0;
+    animation: zoomIn .5s 1s forwards;
+}
+
+.brand--bottom {
+    transition: opacity .3s;
+}
